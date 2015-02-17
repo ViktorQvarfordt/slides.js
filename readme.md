@@ -2,6 +2,8 @@
 
 *Minimalistic slide show presentation*
 
+**[Live demo](https://viktorqvarfordt.github.io/slides.js/example.html)**
+
 ## Features
 
 - Slide transitions.
