@@ -14,7 +14,7 @@
 
 ## Usage
 
-One simle HTML file, [example.html](fix link), see comments inside. [Live demo](fix link).
+One simle HTML file, [example.html](https://github.com/ViktorQvarfordt/slides.js/blob/gh-pages/example.html), see comments inside. [Live demo](https://viktorqvarfordt.github.io/slides.js/example.html).
 
 
 ### Further information
