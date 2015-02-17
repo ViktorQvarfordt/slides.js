@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>slides.js</title>
+
+    <!-- Mobile compatibility -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Load the style sheet, customize to fit your needs. -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- Include this to enable Markdown formatting. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+
+    <!-- Include this to enable LaTeX typesetting via MathJax. -->
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&delayStartupUntil=configured"></script>
+
+    <!-- Load the main module.js, must come after the above dependencies. -->
+    <script src="slides.js"></script>
+
+    <!-- Configure slides.js and initialize -->
+    <script>
+      // Optional customization, these values are default.
+      var options = {
+        rootSelector: '.slides', // Where all slides elements (<div>s) are to be found.
+        transitionDuration: 500, // Time in milliseconds for slide transition. Set to 0 for no fancy.
+        maxWidth: 800, // Max width of each slide.
+        padding: 20, // px units
+        status: true // Show/hide slide current slide (and fragment) number in bottom right corner.
+      };
+
+      var callback = function() { /* Code to run after initializatoin of slides */ };
+
+      // Initialize the presentation.
+      slides.init(options, callback);
+    </script>
+
+  </head>
+
+  <body>
+
+    <div class="slides">
+
+      <div>
+        # slides.js
+
+        Easy to write slides with *Markdown* formatting.
+
+        Press `F11` to enter full-screen and go to next slide with $\to$.
+      </div>
+
+      <div>
+        # Ma$\theta$ematics
+
+        Superb support for mathematics ($\LaTeX$) via *MathJax*.
+
+        Both in-line: $\tau = 2\pi$, and display-style:
+
+        $$\int_{0}^{\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2}.$$
+      </div>
+
+
+      <div>
+        ## Fragments
+
+        Here are <span class="fragment">some fragments</span>
+
+        <ul>
+          <li class="fragment">hidden in</li>
+          <li class="fragment">a list</li>
+        </ul>
+      </div>
+
+
+      <div>
+        # Fragments
+
+        ...
+        <span class="fragment">are elements</span>
+        <span class="fragment">that are revealed in sequence.</span>
+
+        <p class="fragment">They can be arbitrarily nested.</p>
+
+        <ul>
+          <li class="fragment">One<span class="fragment">, Two</span></li>
+          <li class="fragment">Three</li>
+          <ul class="fragment">
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Mango</li>
+          </ul>
+          <li class="fragment">And so on.</li>
+        </ul>
+      </div>
+
+      <div>
+        # End of demo
+
+        Source code and more information at [Github](https://github.com/ViktorQvarfordt/slides.js).
+
+        ## Misc.
+
+        - Supports touch devices (phones and tables).
+        - Slides can be printed (print using system dialog (`ctrl+shift+p`) if the browser print dialog disappears).
+      </div>
+
+    </div>
+
+  </body>
+</html>

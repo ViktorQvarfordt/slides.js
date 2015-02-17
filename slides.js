@@ -1,9 +1,9 @@
 var slides = {
-  // Customize these before calling init().
+  // Customize these when calling init().
   rootSelector: '.slides', // Where all slides elements (<div>s) are to be found.
   transitionDuration: 500, // Time in milliseconds for slide transition. Set to 0 for no fancy.
   maxWidth: 800, // Max width of each slide.
-  padding: 20, // px
+  padding: 20, // px units
   status: true, // Show/hide slide current slide (and fragment) number in bottom right corner.
   // Internal stuff.
   root: null,
@@ -201,8 +201,13 @@ var slides = {
       }
     }
   },
-  init: function(callback) {
-    // Make sure that init can be called both before and after DOM has loaded.
+  init: function(options, callback) {
+
+    if (options) {
+      for (var attrname in options) {
+        obj1[attrname] = this[attrname];
+      }
+    }
 
     var innerInit = function() {
       this.root = document.querySelector(this.rootSelector);
@@ -261,6 +266,7 @@ var slides = {
       MathJax.Hub.Configured();
     };
 
+    // Use as much fancy stuff as is available.
     var wrapper = function() {
       if (typeof marked !== 'undefined') {
         initMarkdown();
@@ -276,6 +282,7 @@ var slides = {
       }
     };
 
+    // Make sure that init can be called both before and after DOM has loaded.
     if (document.readyState === 'complete') {
       wrapper();
     } else {
