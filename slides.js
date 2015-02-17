@@ -205,7 +205,7 @@ var slides = {
 
     if (options) {
       for (var attrname in options) {
-        obj1[attrname] = this[attrname];
+        this[attrname] = options[attrname];
       }
     }
 
