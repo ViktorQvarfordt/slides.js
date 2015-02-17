@@ -1,6 +1,6 @@
 # slides.js
 
-*Minimalistic web-based presentation tool.*
+*Minimalistic slide show presentation*
 
 ## Features
 
