@@ -127,12 +127,20 @@ var slides = {
       }
     }.bind(this));
     window.addEventListener('keydown', function(e) { // It would be nice to bind keydown to this.root, but this requires the element to be focusabe, and making it so is ugly.
-      //           page up                left                      shift + space
-      if (e.keyCode === 33 || e.keyCode === 37 || (e.shiftKey && e.keyCode === 32)) {
+      if (e.keyCode === 37 || // left
+          e.keyCode === 38 || // up
+          e.keyCode === 75 || // k
+          (e.shiftKey && e.keyCode === 13) || // shift + space
+          (e.shiftKey && e.keyCode === 32))   // shift + enter
+      {
         e.preventDefault();
         this.prev();
-      //                page down               right               space               enter
-      } else if (e.keyCode === 34 || e.keyCode === 39 || e.keyCode === 32 || e.keyCode === 13) {
+      } else if (e.keyCode === 39 || // right
+                 e.keyCode === 40 || // down
+                 e.keyCode === 74 || // j
+                 e.keyCode === 32 || // space
+                 e.keyCode === 13)   // enter
+      {
         e.preventDefault();
         this.next();
       } else if (e.keyCode === 70) { // f
