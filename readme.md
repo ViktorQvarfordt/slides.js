@@ -1,6 +1,8 @@
 # slides.js
 
-*Minimalistic web-based presentation tool.*
+*Minimalistic slide show presentation*
+
+**[Live demo](https://viktorqvarfordt.github.io/slides.js/example.html)**
 
 ## Features
 
