@@ -67,7 +67,7 @@ var slides = {
     var prevSlide = this.currentSlide;
     this.currentSlideNumber = n;
     this.currentSlide = this.slides[n-1];
-    if (history.replaceState) {
+    if (history.replaceState && document.origin !== 'null') { // No push state if running from file:// (ie. if document.origin = 'null')
       history.replaceState(null, null, '#' + n);
     }
     this.transitionToSlide(prevSlide, this.currentSlide, prevSlideNumber,this.currentSlideNumber);
