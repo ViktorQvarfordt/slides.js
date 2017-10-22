@@ -17,12 +17,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
 
     <!-- Include this to enable LaTeX typesetting via MathJax. -->
-    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&delayStartupUntil=configured"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML&delayStartupUntil=configured"></script>
 
-    <!-- Load the main module.js, must come after the above dependencies. -->
+    <!-- Load slides.js, must come after the above dependencies. -->
     <script src="slides.js"></script>
 
-    <!-- Configure slides.js and initialize -->
+    <!-- Configure and initialize -->
     <script>
       // Optional customization, these values are default.
       var options = {
@@ -35,7 +35,7 @@
 
       var callback = function() { /* Code to run after initializatoin of slides */ };
 
-      // Initialize the presentation.
+      // Initialize the presentation
       slides.init(options, callback);
     </script>
 
